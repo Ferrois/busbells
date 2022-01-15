@@ -1,0 +1,113 @@
+/* Slider tray function to turn on and off */
+
+.sliderTray.isHidden{
+    position: fixed;
+    top:0px;
+    left:0px;
+    height:100vh;
+    width:200px;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform:translateX(-200px);
+    transition:1s;
+    z-index: 10000 !important;
+}
+
+.sliderTray.isActive{
+    position: fixed;
+    top:0px;
+    left:0px;
+    height:100vh;
+    width:200px;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* transform:translateX(-30vw); */
+    transition: 1s;
+    z-index: 10000 !important;
+}
+
+
+
+.sliderIcon{
+    position:relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin:10px;
+    z-index: 20000 !important;
+    cursor: pointer;
+  }
+
+/* .sliderIcon.isActive{
+    z-index: 20000 !important;
+} */
+
+.sliderIcon.isHidden > .sliderBar{
+
+    width:40px;
+    height:5px;
+    background-color:black;
+    border-radius:5px;
+    transform:translateY(-10px);
+    transition:0s;
+    animation: 0.8s ease 0s forwards _coolCrossAnimation;
+}
+.sliderIcon.isHidden > .sliderBar::before{
+    position:absolute;
+    content:"";
+    width:40px;
+    height:5px;
+    background-color:black;
+    border-radius:5px;
+    transform: translateY(20px);
+    transition:0s;
+    animation: 0.8s ease 0s forwards _coolCrossAnimation2;
+}
+
+.sliderIcon.isActive > .sliderBar{
+
+    width:40px;
+    height:5px;
+    background-color:black;
+    border-radius:5px;
+    transform:translateY(-10px);
+    background-color: white;
+    animation: 0.5s ease 0s forwards coolCrossAnimation;
+}
+.sliderIcon.isActive > .sliderBar::before{
+    position:absolute;
+    content:"";
+    width:40px;
+    height:5px;
+    background-color:black;
+    border-radius:5px;
+    transform: translateY(20px);
+    animation: 0.5s ease 0s forwards coolCrossAnimation2;
+    background-color: white;
+}
+
+@keyframes coolCrossAnimation {
+    0% {transform: translateY(-10px)}
+    60% {transform: translateY(0px);width:5px}
+    100% {transform:rotate(45deg)}
+}
+
+@keyframes coolCrossAnimation2 {
+    0% {transform: translateY(20px)}
+    60% {transform: translateY(0px);width:5px}
+    100% {transform: rotate(-90deg)}
+}
+
+@keyframes _coolCrossAnimation {
+    0% {transform: rotate(45deg);background-color:white}
+    50% {transform: translateY(0px);width:5px;background-color:white}
+    100% {transform: translateY(-10px)}
+}
+
+@keyframes _coolCrossAnimation2 {
+    0% {transform: rotate(-90deg);background-color:white}
+    50% {transform: translateY(0px);width:5px;background-color:white}
+    100% {transform: translateY(20px)}
+}

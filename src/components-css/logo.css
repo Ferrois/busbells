@@ -1,0 +1,16 @@
+.logo-container{
+    display: flex;
+    flex-direction: right;
+    width:200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+}
+
+.logo-container > i{
+    margin:10px;
+}
