@@ -1,6 +1,9 @@
 {
   "name": "first-time",
   "version": "0.1.0",
+  "engines":{
+    "npm": "16.13.2"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
