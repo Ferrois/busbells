@@ -2,7 +2,7 @@
   "name": "first-time",
   "version": "0.1.0",
   "engines":{
-    "npm": "16.13.2"
+    "npm": "8.1.2"
   },
   "private": true,
   "dependencies": {
