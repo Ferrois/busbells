@@ -1,6 +1,5 @@
 import React from "react";
 import "../components-css/body.css"
-import bootstrap from "bootstrap";
 import Product from "./product"
 
 class Body extends React.Component{
