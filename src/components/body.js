@@ -29,7 +29,7 @@ class Body extends React.Component{
                     <div className="productHeader">Our Products</div>
                     <div className="productWrapper">
                         <Product src="images/busbell.jpg" item="Bus Bell Switch" info="Stop button that can be pressed (doesnt come with wiring)" price="10.00"/>
-                        <Product src="images/license.jpg" item="License Plate (7474)" info="It stands for 'Go die' in Chinese" price="60.00"/>
+                        <Product src="images/license.jpg" item="License Plate (7321)" info="Cool bus plate that you can buy" price="60.00"/>
                         <Product/>
                         <Product/>
                     </div>
